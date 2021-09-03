@@ -26,7 +26,7 @@ const Form = () => {
         <div>
             <label>Escolha o seu estabelecimento?</label>
         <label>
-            <input type='radio' name='devweb' id='frontend' checked/>São Paulo
+            <input type='radio' name='devweb' id='frontend'/>São Paulo
         </label>
         <label>
             <input type='radio' name='devweb' id='frontend'/>Santos
