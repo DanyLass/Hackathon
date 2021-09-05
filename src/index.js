@@ -1,16 +1,20 @@
-import './index.css'
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 
-import Header from './components/Header'
-import Form from './components/Form'
+import Home from './pages/Home';
+import Room from './pages/Room';
+
+import './index.css';
+
+const routes = () => (
+    <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/room/:cidade" component={Room} />
+    </Switch>
+);
 
 ReactDOM.render(
-    <div>
-        <Header/>
-        <Form/>
-     
-    </div>,
-
-   document.getElementById('root') 
-)
+    <BrowserRouter>{routes()}</BrowserRouter>,
+    document.getElementById('root')
+);
