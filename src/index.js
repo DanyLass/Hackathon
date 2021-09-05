@@ -10,7 +10,7 @@ import './index.css';
 const routes = () => (
     <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/room/:cidade" component={Room} />
+        <Route path="/room" component={Room} />
     </Switch>
 );
 

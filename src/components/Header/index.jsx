@@ -1,10 +1,6 @@
 import React from 'react';
+// import Test from '../../assets/img/TEST.jpg';
 
-const Header = () => (
-    <div>
-        <h1>Seja Bem Vindo!</h1>
-        <h2>Agende seu horário</h2>
-    </div>
-);
+const Header = () => <div>{/* <img src={Test} alt="Minha Figura" /> */}</div>;
 
 export default Header;
