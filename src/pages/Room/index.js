@@ -1,13 +1,24 @@
 import React from 'react';
+import Company from '../../components/Company';
 import './index.css';
 
 import Header from '../../components/Header';
-// const Room = () => <div>Esse vai ser o room</div>;
 
-const Room = () => (
-    <div>
-        <Header />
-    </div>
-);
+function Room() {
+    return (
+        <>
+            <div>
+                <Header />
+            </div>
+            <div>
+                <Company
+                    onSelectSeat={(seatId) => {
+                        console.log('selected - ' + seatId);
+                    }}
+                />
+            </div>
+        </>
+    );
+}
 
 export default Room;

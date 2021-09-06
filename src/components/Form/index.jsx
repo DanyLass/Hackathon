@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import './index.css';
 
 export default function FormAgendamento() {
@@ -7,6 +8,8 @@ export default function FormAgendamento() {
     const [nome, setNome] = useState('');
     const [sobrenome, setSobrenome] = useState('');
     const [turno, setTurno] = useState('');
+    const [localizacao, setLocalizacao] = useState('');
+    const [dateTime, setDateTime] = useState('');
 
     function handleSubmit(event) {
         const data = {
@@ -14,6 +17,8 @@ export default function FormAgendamento() {
             nome,
             sobrenome,
             turno,
+            localizacao,
+            dateTime,
         };
         event.preventDefault();
         console.log('Submit do form');
@@ -22,6 +27,13 @@ export default function FormAgendamento() {
 
     function handlerbtOnSelect(event) {
         setTurno(event.target.value);
+        setLocalizacao(event.target.value);
+
+        console.log('rbt target input', event.target.value);
+    }
+
+    function handleDateTime(event) {
+        setDateTime(event.target.value);
         console.log('rbt target input', event.target.value);
     }
 
@@ -110,25 +122,30 @@ export default function FormAgendamento() {
                     </p>
                     <label>
                         <input
+                            value="sao paulo"
                             type="radio"
                             name="rblocalizacao"
                             id="rblocalizacao1"
+                            onChange={handlerbtOnSelect}
                         />
                         São Paulo
                         <input
+                            value="santos"
                             type="radio"
                             name="rblocalizacao"
                             id="rblocalizacao2"
+                            onChange={handlerbtOnSelect}
                         />
                         Santos
                     </label>
                 </div>
                 <div className="time">
                     <TextField
+                        onChange={handleDateTime}
+                        value={dateTime}
                         id="date"
-                        label="Date"
+                        label="Data"
                         type="date"
-                        defaultValue="2017-05-24"
                         InputLabelProps={{
                             shrink: true,
                         }}
@@ -136,9 +153,9 @@ export default function FormAgendamento() {
                 </div>
                 <div>
                     <button type="submit" className="button">
-                        {/* <Link to="/room/sp" className="link">
-                        Avançar
-                    </Link> */}
+                        <Link to="/room/sp" className="link">
+                            Avançar
+                        </Link>
                     </button>
                 </div>
             </form>
