@@ -40,5 +40,11 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
         'prefer-object-spread': 'off',
+        'react/prop-types': 'off',
+        'react/destructuring-assignment': [
+            2,
+            'never',
+            { ignoreClassFields: true },
+        ],
     },
 };

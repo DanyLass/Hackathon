@@ -13,7 +13,7 @@ function Room() {
             <div>
                 <Company
                     onSelectSeat={(seatId) => {
-                        console.log('selected - ' + seatId);
+                        console.log(`selected - ${seatId}`);
                     }}
                 />
             </div>

@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Stage, Layer } from '../../react-konva';
 import City from '../City';
 
-import * as layout from '../layout';
+// import * as layout from '../layout';
 
 const useFetch = (url) => {
     const [data, setData] = React.useState(null);
     React.useEffect(() => {
         fetch(url)
             .then((res) => res.json())
-            .then((data) => setData(data));
+            .then((datab) => setData(datab));
     }, [url]);
     return data;
 };
@@ -30,7 +30,7 @@ const MainStage = () => {
 
     const [selectedSeatsIds, setSelectedSeatsIds] = React.useState([]);
 
-    const [popup, setPopup] = React.useState({ seat: null });
+    // const [popup, setPopup] = React.useState({ seat: null });
 
     // calculate available space for drawing
     useEffect(() => {
@@ -51,7 +51,7 @@ const MainStage = () => {
         const stage = stageRef.current;
         const clientRect = stage.getClientRect({ skipTransform: true });
 
-        const scaleToFit = size.width / clientRect.width;
+        // const scaleToFit = size.width / clientRect.width;
         setScale(scaleToFit);
         setScaleToFit(scaleToFit);
         setVirtualWidth(clientRect.width);
@@ -68,12 +68,12 @@ const MainStage = () => {
 
     let lastSectionPosition = 0;
 
-    const handleHover = React.useCallback((seat, pos) => {
-        setPopup({
-            seat,
-            position: pos,
-        });
-    }, []);
+    // const handleHover = React.useCallback((seat, pos) => {
+    //     setPopup({
+    //         seat,
+    //         position: pos,
+    //     });
+    // }, []);
 
     const handleSelect = React.useCallback(
         (seatId) => {
@@ -96,7 +96,8 @@ const MainStage = () => {
         return <div ref={containerRef}>Loading...</div>;
     }
 
-    const maxSectionWidth = layout.getMaximimSectionWidth(
+    const maxSectionWidth = 100(
+        // layout.getMaximimSectionWidth(
         jsonData.seats.sections
     );
 
@@ -133,11 +134,10 @@ const MainStage = () => {
             >
                 <Layer>
                     {jsonData.seats.sections.map((section, index) => {
-                        const height = layout.getSectionHeight(section);
-                        const position =
-                            lastSectionPosition + layout.SECTIONS_MARGIN;
+                        const height = 100; // layout.getSectionHeight(section);
+                        const position = lastSectionPosition + 100; // layout.SECTIONS_MARGIN;
                         lastSectionPosition = position + height;
-                        const width = layout.getSectionWidth(section);
+                        const width = 100; //  layout.getSectionWidth(section);
 
                         const offset = (maxSectionWidth - width) / 2;
 
@@ -146,10 +146,10 @@ const MainStage = () => {
                                 x={offset}
                                 y={position}
                                 height={height}
-                                key={index}
+                                key={index.id}
                                 section={section}
                                 selectedSeatsIds={selectedSeatsIds}
-                                onHoverSeat={handleHover}
+                                // onHoverSeat={handleHover}
                                 onSelectSeat={handleSelect}
                                 onDeselectSeat={handleDeselect}
                             />
@@ -158,7 +158,7 @@ const MainStage = () => {
                 </Layer>
             </Stage>
             {/* draw popup as html */}
-            {popup.seat && (
+            {/* {popup.seat && (
                 <SeatPopup
                     position={popup.position}
                     seatId={popup.seat}
@@ -166,7 +166,7 @@ const MainStage = () => {
                         setPopup({ seat: null });
                     }}
                 />
-            )}
+            )} */}
         </div>
     );
 };
