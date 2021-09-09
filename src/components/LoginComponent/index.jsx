@@ -8,9 +8,13 @@ function LoginComponent() {
             <form>
                 <h1>Faça seu Login</h1>
                 <input placeholder="E-mail" />
-                <input type="password" placeholder="senha" />
+                <p>
+                    <input type="password" placeholder="senha" />
+                </p>
                 <button type="submit">Entrar</button>
-                <a href="forgot"> Esqueci minha senha</a>
+                <p>
+                    <a href="forgot"> Esqueci minha senha</a>
+                </p>
             </form>
         </Container>
     );

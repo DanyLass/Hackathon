@@ -40,7 +40,6 @@ export default function FormAgendamento() {
     return (
         <>
             <div>
-                <h1>Boas Vindas!</h1>
                 <h2>Agendamento</h2>
             </div>
             <form onSubmit={handleSubmit}>

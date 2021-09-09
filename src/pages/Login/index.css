@@ -1,16 +1,16 @@
 body {
     font-family: sans-serif;
     font-weight: 300;
-    background-color: #fe4400;
-    color: cornsilk;
-    text-align: left;
+    background-color: royalblue;
+    color: #ff601c;
+    text-align: center;
 }
 
 .button {
-    background-color: blue;
+    background-color: #ff601c;
 }
 
 .link {
     text-decoration: none;
-    color: white;
+    color: #fe4400;
 }
