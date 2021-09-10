@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import './index.css';
 
 export default function FormAgendamento() {
-    const [email, setEmail] = useState('');
     const [nome, setNome] = useState('');
-    const [sobrenome, setSobrenome] = useState('');
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
     const [turno, setTurno] = useState('');
     const [localizacao, setLocalizacao] = useState('');
     const [dateTime, setDateTime] = useState('');
 
     function handleSubmit(event) {
         const data = {
-            email,
+            senha,
             nome,
-            sobrenome,
+            email,
             turno,
             localizacao,
             dateTime,
@@ -39,9 +38,6 @@ export default function FormAgendamento() {
 
     return (
         <>
-            <div>
-                <h2>Agendamento</h2>
-            </div>
             <form onSubmit={handleSubmit}>
                 <div className="test">
                     <p>
@@ -56,14 +52,14 @@ export default function FormAgendamento() {
                     />
                 </div>
                 <p>
-                    <label htmlFor="inputSobrenome">Sobrenome</label>
+                    <label htmlFor="inputSenha">Senha</label>
                 </p>
                 <input
-                    placeholder="Sobrenome"
-                    type="text"
-                    name="sobrenome"
-                    id="sobrenome"
-                    onChange={(e) => setSobrenome(e.target.value)}
+                    placeholder="Senha"
+                    type="passord"
+                    name="senha"
+                    id="senha"
+                    onChange={(e) => setSenha(e.target.value)}
                 />
                 <div>
                     <p>
