@@ -1,14 +1,7 @@
 import React from 'react';
-import Company from '../../components/Company';
 
 function Room() {
-    return (
-        <Company
-            onSelectSeat={(seatId) => {
-                console.log(`selected - ${seatId}`);
-            }}
-        />
-    );
+    return <div>ROOM</div>;
 }
 
 export default Room;

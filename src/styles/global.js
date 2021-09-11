@@ -7,9 +7,7 @@ export default createGlobalStyle`
     font-family: 'Metropolis';
     src: url(${MetropolisRegular}) format(otf);
     font-weight: 700;
-    font-style: normal;
-    font-size: 18px;
-    
+    font-style: normal;   
 }
 
 *{ 
@@ -21,7 +19,7 @@ export default createGlobalStyle`
 
 body {
     background:  #36357E;
-    color: #FE4400;
+    color #FE4400;
     -webkit-front-smoothing: antialiased;
 
 }
@@ -29,10 +27,12 @@ body {
 body, input, button {
     font-family: 'Metropolis', serif;
     font-size: 18px;
+    
 }
 
 button {
     cursor: pointer;
+   
 }
 
 `;

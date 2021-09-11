@@ -10,8 +10,7 @@ function LoginComponent() {
             <Content>
                 <img src={logoImg} alt="FCamara" />
                 <form>
-                    <h1>Faça seu Login</h1>
-                    <input placeholder="E-mail" />
+                    <input placeholder="Email" />
 
                     <input type="password" placeholder="Senha" />
 
