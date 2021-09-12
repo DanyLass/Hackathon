@@ -1,29 +1,41 @@
 import styled from 'styled-components';
+import Button from '@material-ui/core/Button';
 
 export const Container = styled.div`
-    height: 100vh;
-    display: flex;
-    // width: 100vh;
-    align-items: stretch;
-`;
-
-export const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
-    width: 50%;
-    max-width: 500%;
+    flex: 1;
 `;
 
 export const TopView = styled.div`
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px;
+
     img {
-        position: absolute;
+        width: 200px;
+        height: 200px;
+    }
+`;
+
+export const ButtonView = styled.div``;
+
+export const LoginButton = styled(Button)``;
+
+export const InfoView = styled.div`
+    h1 {
+        font-size: 54px;
+    }
+
+    h2 {
+        color: #ffffff;
+        font-weight: 400;
+        width: 500px;
+        font-size: 24px;
+    }
+`;
+
+export const BottomView = styled.div`
+    img {
         width: 300px;
         height: 300px;
-        left: 822px;
-        top: 168px;
-        margin-top:20px
+    }
 `;
-export const ButtonView = styled.div``;
-export const BottomView = styled.div``;

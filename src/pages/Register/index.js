@@ -1,7 +1,9 @@
 import React from 'react';
 
-import FormAgendamento from '../../components/Form';
+import Register from '../../components/Register';
 
-const Register = () => <FormAgendamento />;
+function RegisterForm() {
+    return <Register />;
+}
 
-export default Register;
+export default RegisterForm;
