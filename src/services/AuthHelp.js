@@ -8,23 +8,9 @@
 import React from 'react';
 
 class AuthHelp {
-    static sessionStorage() {
-        // debugger;
-        console.log('authelp entriiiiiiii');
-        if (localStorage.getItem('fclogin')) {
-            localStorage.setItem(
-                'fclogin',
-                'Troquei de oi Dani para isto que tu ta lendo'
-            );
-        } else {
-            localStorage.setItem('fclogin', 'oid Dani');
-        }
-    }
-
     static login(usuario, senha) {
-        // debugger;
         if (usuario == 'dani@test.com' && senha == '123456') {
-            let autorizado = "{usuario:'" + usuario + "'}";
+            let autorizado = usuario;
             localStorage.setItem('fclogin', autorizado);
             return true;
         } else {
@@ -32,10 +18,17 @@ class AuthHelp {
         }
     }
 
-    static isLoged() {
-        // localStorage.getItem('fclogin')
-        // pegar o valor, verificar se logado e retornar true ou false
-        return true;
+    static usuarioLogado() {
+        if (localStorage.getItem('fclogin')) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    static esqueceuSenha(email) {
+        // usar o email para enviar a mensagem padrão de recurperação
+        //
     }
 }
 

@@ -27,13 +27,10 @@ export default createGlobalStyle`
     body, input, button {
         font-family: 'Metropolis', serif;
         font-size: 18px;
-     
-        
     }
 
     button {
         cursor: pointer;
-    
     }
 
 `;
