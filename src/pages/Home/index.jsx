@@ -26,6 +26,7 @@ function Home() {
                             sua ida aos nossos escritórios com segurança
                         </h2>
                     </Context>
+
                     <TopLogin>
                         <Link to="/register" type="button">
                             <Button renderAs="button" type="button">

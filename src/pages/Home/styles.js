@@ -53,10 +53,11 @@ export const InfoView = styled.div`
 
 export const Desing = styled.div`
     img {
-        position: absolute;
+        position: relative;
         width: 300px;
         height: 250px;
-        left: 700px;
-        top: 250px;
+        left: 400px;
+        top: -500px;
     }
 `;
+export const Wave = styled.div``;

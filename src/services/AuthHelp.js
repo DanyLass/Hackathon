@@ -9,7 +9,10 @@ import React from 'react';
 
 class AuthHelp {
     static login(usuario, senha) {
-        if (usuario == 'dani@test.com' && senha == '123456') {
+        debugger;
+        const key = 'registro_' + usuario;
+        const existLogin = JSON.parse(localStorage.getItem(key));
+        if (existLogin && existLogin.password == senha) {
             let autorizado = usuario;
             localStorage.setItem('fclogin', autorizado);
             return true;
