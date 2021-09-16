@@ -40,11 +40,12 @@ export const Content = styled.div`
         margin: 8px;
         background: #ff601c;
         border-radius: 15px;
-        color: #ffffff;
-    }
 
-    &:hover {
-        background: ${shade(0.2, '#ff9000')};
+        color: #ffffff;
+
+        &:hover {
+            background: ${shade(0.2, '#ff9000')};
+        }
     }
 
     a {
@@ -58,6 +59,5 @@ export const Content = styled.div`
         height: 150px;
         left: 619px;
         top: 82px;
-        //position: absolute;
     }
 `;

@@ -4,7 +4,7 @@ import { shade } from 'polished';
 export const Container = styled.div`
     height: 100vh;
     display: flex;
-    // width: 100vh;
+
     align-items: stretch;
 `;
 
@@ -59,12 +59,9 @@ export const Content = styled.div`
         height: 150px;
         left: 619px;
         top: 82px;
-        // position: absolute;
     }
 
     h1 {
-        //position: absolute;
-        // medidas alteradas
         width: 350px;
         height: 19px;
         left: 300px;

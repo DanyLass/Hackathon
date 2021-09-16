@@ -22,7 +22,6 @@ const useSetPassword = (localStorageKey) => {
 };
 
 const login = (user, passwd) => {
-    console.log('login');
     return AuthHelp.login(user, passwd);
 };
 
@@ -45,13 +44,11 @@ function LoginComponent() {
     const loginHandler = (event) => {
         event.preventDefault();
         _login = login(email, password);
-        console.log('login retorno', _login);
+
         if (_login === true) {
-            console.log('Sucesso login', _login);
             setmostreMensagem(false);
             window.location.href = '/room';
         } else {
-            console.log('Falha  login', _login);
             setmostreMensagem(true);
         }
     };

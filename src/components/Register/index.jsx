@@ -60,13 +60,11 @@ function Register() {
             password,
             confirmPassword
         );
-        console.log('registro retorno', _registro);
+
         if (_registro === true) {
-            console.log('Sucesso Registro', _registro);
             setmostreMensagem(false);
             window.location.href = '/login';
         } else {
-            console.log('Falha  Registro', _registro);
             setmostreMensagem(true);
         }
     };

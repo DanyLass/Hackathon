@@ -18,6 +18,7 @@ module.exports = {
     },
     plugins: ['react', 'jsx-a11y', 'import', 'react-hooks', 'prettier'],
     rules: {
+        'arrow-body-style': 'off',
         'jsx-a11y/label-has-associated-control': [
             2,
             {

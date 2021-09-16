@@ -8,7 +8,7 @@
 import React from 'react';
 
 class AuthHelpRegister {
-    // na ausencia de backend ou banco de dadados para armazenar os registros, para fins de teste utilizei a session storage.
+    // na ausencia de backend ou banco de dados para armazenar os registros, para fins de teste utilizei a session storage.
     static register(nome, email, password, confirmPassword) {
         debugger;
         if (password === confirmPassword) {

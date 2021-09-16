@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
     background: #36357e;
     padding: 0 30px;
-    //display: flex;
 `;
 
 export const Content = styled.div`
@@ -42,7 +41,6 @@ export const TopLogin = styled.div`
         text-transform: capitalize;
         margin: 10px;
         transition: background-color 0.2s;
-        //text-decoration: none; nao tirou a linha azul
     }
 `;
 

@@ -30,8 +30,7 @@ class AuthHelp {
     }
 
     static esqueceuSenha(email) {
-        // usar o email para enviar a mensagem padrão de recurperação
-        //
+        // TODO: usar o email para enviar a mensagem padrão de recurperação
     }
 }
 
