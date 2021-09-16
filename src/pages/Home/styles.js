@@ -10,6 +10,7 @@ export const Content = styled.div`
     height: 300px;
     max-width: 600px;
     margin: 300px auto;
+    transition: background-color 0.2s;
 `;
 
 export const Context = styled.div`
@@ -40,6 +41,8 @@ export const TopLogin = styled.div`
         border-radius: 10px;
         text-transform: capitalize;
         margin: 10px;
+        transition: background-color 0.2s;
+        //text-decoration: none; nao tirou a linha azul
     }
 `;
 

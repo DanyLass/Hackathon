@@ -56,8 +56,20 @@ export const Content = styled.div`
     }
     img {
         width: 200px;
-        height: 100px;
+        height: 150px;
         left: 619px;
         top: 82px;
+        // position: absolute;
+    }
+
+    h1 {
+        //position: absolute;
+        // medidas alteradas
+        width: 350px;
+        height: 19px;
+        left: 300px;
+        top: 780px;
+        font-size: 13px;
+        color: #ffffff;
     }
 `;

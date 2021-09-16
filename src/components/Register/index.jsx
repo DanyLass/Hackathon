@@ -81,30 +81,27 @@ function Register() {
                         onChange={onNamechange}
                         type="nome"
                     />
-
                     <input
                         placeholder="Email"
                         type="email"
                         onChange={onEmailChange}
                         value={email}
                     />
-
                     <input
                         placeholder="Senha"
                         type="password"
                         onChange={onpassWordChange}
                     />
-
                     <input
                         placeholder="Confirmar Senha"
                         type="password"
                         onChange={onConfirmPassword}
                     />
-
                     <button type="button" onClick={handlerRegister}>
                         Cadastrar
                     </button>
                     {mostreMensagem ? <p>Senhas não conferem</p> : <span />}
+                    <h1> Já tem uma conta? Entre agora</h1>
                 </Form>
             </Content>
         </Container>

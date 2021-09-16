@@ -41,11 +41,10 @@ export const Content = styled.div`
         background: #ff601c;
         border-radius: 15px;
         color: #ffffff;
-        transition: background-color 0.2s;
+    }
 
-        &:hover {
-            background: ${shade(0.2, '#ff9000')};
-        }
+    &:hover {
+        background: ${shade(0.2, '#ff9000')};
     }
 
     a {
@@ -56,8 +55,9 @@ export const Content = styled.div`
     }
     img {
         width: 200px;
-        height: 100px;
+        height: 150px;
         left: 619px;
         top: 82px;
+        //position: absolute;
     }
 `;
